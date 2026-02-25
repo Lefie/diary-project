@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:diary/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../models/journal_model.dart';
-import '../EntryList/EntryList_Screen.dart';
 
 class JournalScreenContent extends StatefulWidget {
   const JournalScreenContent({super.key});

@@ -1,8 +1,6 @@
 
-import 'package:diary/screens/Entry/EntryScreenContent.dart';
 import 'package:diary/screens/EntryList/EntryListScreenContent.dart';
 import 'package:diary/screens/Home/HomeScreenContent.dart';
-import 'package:diary/screens/Home/Home_Screen.dart';
 import 'package:diary/screens/Journal/JournalScreenContent.dart';
 import 'package:diary/screens/Login/LoginScreenContent.dart';
 import 'package:diary/screens/PersonalHome/PersonalHomeContent.dart';

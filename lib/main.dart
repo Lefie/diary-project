@@ -1,8 +1,5 @@
 import 'package:diary/screens/Entry/Entry_Screen.dart';
-import 'package:diary/screens/EntryList/EntryList_Screen.dart';
 import 'package:diary/screens/EntryScreen/EntryScreen.dart';
-import 'package:diary/screens/Home/Home_Screen.dart';
-import 'package:diary/screens/Journal/Journal_Screen.dart';
 import 'package:diary/screens/MainScreen/MainScreen.dart';
 import 'package:diary/theme.dart';
 import 'package:flutter/material.dart';

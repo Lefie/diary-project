@@ -1,4 +1,3 @@
-import 'package:diary/screens/Home/Home_Screen.dart';
 import 'package:diary/services/journal_service.dart';
 import 'package:diary/ui_widgets/StyledButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';

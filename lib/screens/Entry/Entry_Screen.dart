@@ -4,7 +4,6 @@ import 'package:diary/ui_widgets/EmojiPanel.dart';
 import 'package:diary/ui_widgets/StyledButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../../models/journal.dart';
 import '../../models/journal_model.dart';
 import '../../theme.dart';
 
