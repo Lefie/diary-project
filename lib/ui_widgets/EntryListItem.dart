@@ -3,7 +3,6 @@ import 'package:diary/theme.dart';
 import 'package:diary/ui_widgets/DateTime.dart';
 import 'package:diary/ui_widgets/StyledButton.dart';
 import 'package:flutter/material.dart';
-import '../models/journal.dart';
 import '../models/journal_model.dart';
 import '../screens/Entry/Entry_Screen.dart';
 

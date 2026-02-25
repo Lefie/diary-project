@@ -2,7 +2,6 @@ import 'package:diary/models/journal_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../models/journal.dart';
 import '../models/stats_model.dart';
 
 
@@ -22,25 +21,7 @@ class JournalService {
       rethrow; // Re-throw to handle err
     }
   }
-  
-  Future<List<Journal>> readAllJournals() async {
-    QuerySnapshot<Map<String, dynamic>> res = await journal_db.collection("journals").get();
 
-    List<Journal> journals = [];
-
-    res.docs.forEach((doc){
-      final json = {
-        "mood": doc.data()["mood"],
-        "content": doc.data()["content"],
-        "created_at": (doc.data()["created_at"] as Timestamp).toDate(),
-        "journal_id": doc.id
-      };
-      Journal j = Journal.fromJson(json);
-      journals.add(j);
-    });
-
-    return journals;
-  }
 
   Future<List<JournalModel>> readAllJournalEntriesByCurrentUser(String uid) async{
     print("read all journal entries called");

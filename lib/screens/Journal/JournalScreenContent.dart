@@ -1,4 +1,3 @@
-import 'package:diary/models/journal.dart';
 import 'package:diary/services/journal_service.dart';
 import 'package:diary/ui_widgets/StyledButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';

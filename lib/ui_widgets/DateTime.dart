@@ -1,7 +1,5 @@
 
 import 'package:flutter/cupertino.dart';
-
-import '../models/journal.dart';
 import '../models/journal_model.dart';
 
 class DateTimeUI extends StatelessWidget{

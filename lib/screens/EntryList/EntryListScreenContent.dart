@@ -2,7 +2,6 @@ import 'package:diary/services/journal_service.dart';
 import 'package:diary/ui_widgets/StyledButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../../models/journal.dart';
 import '../../models/journal_model.dart';
 import '../../theme.dart';
 import '../../ui_widgets/EntryListItem.dart';
