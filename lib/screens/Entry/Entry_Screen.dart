@@ -78,7 +78,7 @@ class _EntryState extends State<Entry> {
             Center(child: Text("Entry", style: Theme.of(context).textTheme.displayLarge)),
             SizedBox(height:50,),
             isloading ? Text("loading"): Padding(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.all(5),
               child: Column(children: [
                 isEditing?
                 Column(children: [
@@ -116,9 +116,11 @@ class _EntryState extends State<Entry> {
                         children: [
                           Expanded(child:
                           SingleChildScrollView(child:
-                          Text(current_journal.content,
-                            style:Theme.of(context).textTheme.bodyMedium,
-                          ))),
+                          Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(current_journal.content,
+                              style:Theme.of(context).textTheme.bodyMedium,
+                          ))),),
                           SizedBox(height: 20,),
                           StyledEmojiButton(emoji: current_journal.mood == "happy" ? AppEmojis.happy : current_journal.mood == "sad"? AppEmojis.sad:AppEmojis.neutral, onPressed: (){}, isSelected: false),
                         ],
