@@ -3,6 +3,7 @@ import 'package:diary/screens/Login/LoginScreenContent.dart';
 import 'package:diary/screens/Signup/SignupScreenContent.dart';
 import 'package:diary/ui_widgets/StyledButton.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class HomeScreenContent extends StatelessWidget {
@@ -20,15 +21,18 @@ class HomeScreenContent extends StatelessWidget {
           child:
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            spacing:20,
             children: [
               SizedBox(height:40),
               Container(
-                margin: EdgeInsets.only(top:100),
+                margin: EdgeInsets.only(top:100, bottom:10),
                 child: Text(
                     "Welcome to the Diary",
                     style: Theme.of(context).textTheme.displayLarge),),
-              SizedBox(height:40),
+              Padding(
+                padding: EdgeInsets.only(left:100, right:55),
+                child:  Text("Journal your insights anytime, anywhere", style: GoogleFonts.lexend(),textAlign: TextAlign.end ,),
+              ),
+              SizedBox(height:80),
               StyledButton(
                   onPressed:(){
                     print("Login");
@@ -39,6 +43,7 @@ class HomeScreenContent extends StatelessWidget {
 
                   },
                   child: Text("Login", style: Theme.of(context).textTheme.headlineLarge)),
+              SizedBox(height:40),
               StyledButton(onPressed:(){
                 Navigator.push(
                   context,

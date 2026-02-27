@@ -5,6 +5,7 @@ import 'package:diary/screens/Journal/JournalScreenContent.dart';
 import 'package:diary/screens/Login/LoginScreenContent.dart';
 import 'package:diary/screens/PersonalHome/PersonalHomeContent.dart';
 import 'package:diary/screens/Signup/SignupScreenContent.dart';
+import 'package:diary/testData/add_test_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -32,6 +33,11 @@ class _MainScreenState extends State<MainScreen> {
       EntryListContent(),
   ];
 
+  @override
+  void initState() {
+    super.initState();
+    //addLotsOfData(20);
+  }
 
 
   @override
@@ -54,7 +60,7 @@ class _MainScreenState extends State<MainScreen> {
           ListTile(
             title: Text('Log out', style:GoogleFonts.lexend()),
             onTap: () async{
-              print("log out");
+              Navigator.pop(context);
               await FirebaseAuth.instance.signOut();
             },
           ),

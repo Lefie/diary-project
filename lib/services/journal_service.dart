@@ -28,6 +28,7 @@ class JournalService {
     QuerySnapshot<Map<String, dynamic>> res = await journal_db
         .collection("journals")
         .where('user_id',isEqualTo: uid)
+        .orderBy("created_at", descending: true)
         .get();
 
 
