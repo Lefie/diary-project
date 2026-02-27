@@ -28,7 +28,6 @@ class _StatsContentState extends State<StatsContent> {
   @override
   void initState() {
     super.initState();
-    print(widget.type);
     getStats();
     totalStats();
   }
@@ -104,12 +103,18 @@ class _StatsContentState extends State<StatsContent> {
       return Column(
         children: [
           Text("Total entries this week:"),
+          SizedBox(height:15),
           Expanded(
             child: BarChart(
               BarChartData(
                 groupsSpace: 5.0,
                 barGroups: makeGroup(),
                 titlesData: FlTitlesData(
+                    topTitles: (AxisTitles(
+                        sideTitles: SideTitles(
+                          showTitles: false,
+                        )
+                    )),
                   bottomTitles: AxisTitles(
                     sideTitles: SideTitles(
                       showTitles: true,
@@ -148,11 +153,17 @@ class _StatsContentState extends State<StatsContent> {
       return Column(
         children: [
           Text("Total entries last week: "),
+          SizedBox(height:15),
           Expanded(child: BarChart(
             BarChartData(
                 groupsSpace: 5.0,
                 barGroups: makeGroup(),
                 titlesData: FlTitlesData(
+                  topTitles: (AxisTitles(
+                    sideTitles: SideTitles(
+                      showTitles: false,
+                    )
+                  )),
                     bottomTitles: AxisTitles(
                         sideTitles: SideTitles(
                             showTitles: true,
@@ -193,10 +204,10 @@ class _StatsContentState extends State<StatsContent> {
         return Column(
           children: [
             Text("Total entries:  ${totalEntriesStats!.total_num.toInt()} "),
+            SizedBox(height:15),
             Expanded(child:
             BarChart(BarChartData(
                 barGroups: [
-
                   BarChartGroupData(
                       x: 0,
                       barRods: [BarChartRodData(
@@ -226,6 +237,11 @@ class _StatsContentState extends State<StatsContent> {
                   ),
                 ],
                 titlesData: FlTitlesData(
+                    topTitles: (AxisTitles(
+                        sideTitles: SideTitles(
+                          showTitles: false,
+                        )
+                    )),
                   bottomTitles: AxisTitles(
                     sideTitles: SideTitles(
                       showTitles: true,

@@ -24,12 +24,12 @@ class _PersonalHomeContentState extends State<PersonalHomeContent> with SingleTi
   final User? user = FirebaseAuth.instance.currentUser;
   late UserModel? currentUser;
   bool _isLoading = true;
-  late double _actualTemp = 0.0;
-  late double _feelsLikeTemp = 0.0;
+  double _actualTemp = 0.0;
+  double _feelsLikeTemp = 0.0;
   late TabController _tabController;
 
   static const List<Tab> myTabs = <Tab>[
-    Tab(text: "This week"),
+    Tab(text: "This week", ),
     Tab(text: 'Last week'),
     Tab(text: 'Total Stats',)
   ];
@@ -113,7 +113,7 @@ class _PersonalHomeContentState extends State<PersonalHomeContent> with SingleTi
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height:50),
-              Text("Welcome, ${currentUser!.username}",style: Theme.of(context).textTheme.displayLarge,),
+              Text("Welcome, ${currentUser!.username[0].toUpperCase() +currentUser!.username.substring(1) }",style: Theme.of(context).textTheme.displayLarge,),
               SizedBox(height: 50,),
               Text("${DateTime.now().month}/${DateTime.now().day}/ ${DateTime.now().year}",
               style: GoogleFonts.lexend(textStyle: TextStyle(fontSize: 32))),
@@ -127,6 +127,7 @@ class _PersonalHomeContentState extends State<PersonalHomeContent> with SingleTi
                     TabBar(
                       controller: _tabController,
                       tabs: myTabs,
+                      labelColor: Colors.white,
                     ),
                     SizedBox(
                       height:300,
